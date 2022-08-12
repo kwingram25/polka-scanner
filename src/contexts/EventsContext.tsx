@@ -55,11 +55,8 @@ export function EventsContextProvider({
 
   const getFilteredRange = useCallback(
     (start: number, end: number): number[] => {
-      console.log(end, start);
       const count = 1 + end - start;
       const range = [...Array(count).keys()].map((i) => i + start);
-
-      console.log(range);
 
       return range.filter(
         (blockNumber) =>

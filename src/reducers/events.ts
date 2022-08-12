@@ -16,7 +16,6 @@ export const INIT_STATE: EventsState = {
 };
 
 export const reducer: Reducer<EventsState, EventsAction> = (state, action) => {
-  console.log(action);
   switch (action.type) {
     // Add events to result set, update lists of unique blocks and methods found
     case 'ADD':
