@@ -91,11 +91,8 @@ export const reducer: Reducer<EventsState, EventsAction> = (state, action) => {
 
     case 'RESET':
       return {
-        ...state,
-        isFirstScanAttempt: true,
-        events: [],
-        blocks: [],
-        methods: [],
+        ...INIT_STATE,
+        scanMode: state.scanMode,
       };
 
     case 'SCAN_MODE': {
